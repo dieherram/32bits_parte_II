@@ -23,7 +23,10 @@ const store = new Vuex.Store({
     totalGamesSold(state){
       let games = state.sales.map((game) => game.name)
       return games.reduce((a, c) => (a[c] = (a[c] || 0 ) + 1, a), Object.create(null));
-    }
+    },
+    totalAmount(state){
+      return state.sales.reduce((acc, game) => acc + game.price, 0);
+    },
   },
   mutations: {
     ADD_SALES(state, product){

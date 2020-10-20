@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>Hay {{availableGames.length}} juegos con stock</p>
+    <p>El stock total de juegos es de: {{totalStock}}</p>
     <list :hasButton="true" :games="availableGames" @sell-product="saleProduct"></list>
   </div>
 </template>
@@ -13,7 +14,7 @@ export default {
       List
   },
     computed: {
-        ...mapGetters(["availableGames"]),
+        ...mapGetters(["availableGames", "totalStock"]),
     },
     methods: {
       ...mapActions(["processSale"]),

@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <h1>La Pagina que busca no esta disponible</h1>
+  </div>
 </template>
 
 <script>
